@@ -1,0 +1,569 @@
+{
+  "name": "PLCS7-1500_TAGS",
+  "tagType": "Folder",
+  "tags": [
+    {
+      "valueSource": "opc",
+      "opcItemPath": "ns\u003d1;s\u003d[SIMATIC S7-1500][Diagnostics]/Connected",
+      "dataType": "Boolean",
+      "alarms": [
+        {
+          "mode": "OnCondition",
+          "notes": "(1) Check if the PLC is properly connected to the TIA Portal. (2) Refer to the user manual to make sure the device connection is properly configured.",
+          "name": "PLC Connection Failure Alarm",
+          "priority": "Critical",
+          "ackMode": "Manual",
+          "activeCondition": {
+            "bindType": "Expression",
+            "value": "!{[.]PLCSTATUS.value}"
+          }
+        }
+      ],
+      "name": "PLCSTATUS",
+      "formatString": "#,##0.##",
+      "tagType": "AtomicTag",
+      "opcServer": "Ignition OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "ns\u003d1;s\u003d[SIMATIC S7-1500][Diagnostics]/Hostname",
+      "dataType": "String",
+      "alarms": [
+        {
+          "mode": "BadQuality",
+          "notes": "(1) Check if the PLC is properly connected to the TIA Portal with correct IP address. (2) Refer to the user manual to make sure the device connection with both TIA Portal and Ignition are properly configured.",
+          "activeCondition": false,
+          "name": "PLC Configuration Error Alarm",
+          "label": "",
+          "priority": "Critical",
+          "displayPath": ""
+        }
+      ],
+      "name": "PLC IP ADDRESS",
+      "historyEnabled": true,
+      "tagType": "AtomicTag",
+      "opcServer": "Ignition OPC UA Server"
+    },
+    {
+      "name": "Rung_Tags",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"I_SELECT_AUTO_MAN\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "SELECT_AUTO_MAN Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "I_SELECT_AUTO_MAN",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_POWER\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "START Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_POWER",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_PAUSE\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_PAUSE Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_PAUSE",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_FEEDER_CYL\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_FEEDER_CYL Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_FEEDER_CYL",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_WP_GOOD_RESET\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_WP_GOOD_RESET Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_WP_GOOD_RESET",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_MODE_SWITCH\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_MODE_SWITCH Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_MODE_SWITCH",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_MANUAL_JOG\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_MANUAL_JOG Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_MANUAL_JOG",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_WP_PRESENT\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_WP_PRESENT Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_WP_PRESENT",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"I_POSTION_DWN\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "POSITION_DWN Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "I_POSTION_DWN",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"I_FEEDER_FWD\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "FEEDER_FWD Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "I_FEEDER_FWD",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_MANUAL_MODE_RESET\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_MANUAL_MODE_RESET Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_MANUAL_MODE_RESET",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_DT_WP_GOOD\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_DT_WP_GODD Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_DT_WP_GOOD",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"Q_FEEDER_CYL\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "Q_FEEDER_CYL Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "Q_FEEDER_CYL",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"I_TRNSFR_FWD\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "TRNSFR_FWD Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "I_TRNSFR_FWD",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_TRANSFER_CYL\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_TRANSER_CYL Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_TRANSER_CYL",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"INT_WP_BAD\"",
+          "dataType": "Int4",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "WP_BAD Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "INT_WP_BAD",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"Q_TRANSFER_CYL\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "Q_TRANSFER_CYL Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "Q_TRANSFER_CYL",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_WP_BAD\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_WP_BAD Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_WP_BAD",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_REJECTION_CYL\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_REJECTION_CYL Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_REJECTION_CYL",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_AUTO_MODE_RESET\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_AUTO_MODE_RESET Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_AUTO_MODE_RESET",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"I_STOP_B\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "I_STOP_B Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "I_STOP_B",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"I_START_B\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "I_START_B Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "I_START_B",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_DT_RAMP_FULL\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "OnCondition",
+              "setpointA": 0.0,
+              "notes": "Please remove the pieces on the ramp.",
+              "name": "RAMP FULL Alarm",
+              "ackMode": "Auto",
+              "activeCondition": {
+                "bindType": "Tag",
+                "value": "[.]M_DT_RAMP_FULL"
+              }
+            },
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_DT_RAMP_FULL Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_DT_RAMP_FULL",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"INT_WP_GOOD\"",
+          "dataType": "Int4",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "WP_GOOD Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "INT_WP_GOOD",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_WP_BAD_RESET\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_WP_BAD_RESET Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_WP_BAD_RESET",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"Q_POSITION_CYL\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "Q_POSITION_CYL Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "Q_POSITION_CYL",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_MANUAL_JOG_RESET\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_MANUAL_JOG_RESET Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_MANUAL_JOG_RESET",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"I_WP_SENSE\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "WP_SENSE Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "I_WP_SENSE",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"TEST_MODE_(TIA_PORTAL_ONLY)\"",
+          "dataType": "Boolean",
+          "name": "TEST_MODE_(TIA_PORTAL_ONLY)",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"I_FEEDER_BACK\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "FEEDER_BACK Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "I_FEEDER_BACK",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"Q_REJECTION_CYL\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "Q_REJECTN_CYL Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "Q_REJECTION_CYL",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"M_POSITION_CYL\"",
+          "dataType": "Boolean",
+          "alarms": [
+            {
+              "mode": "BadQuality",
+              "notes": "(1) Check PLC connection status. (2) Refer to user manual for configuring Siemens addressing and make sure the inputs are correct, including the matching PLC device name in Gateway.",
+              "name": "M_POSITION_CYL Error Config Alarm",
+              "priority": "High"
+            }
+          ],
+          "name": "M_POSITION_CYL",
+          "tagType": "AtomicTag",
+          "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:PLC_1"
+        }
+      ]
+    }
+  ]
+}
