@@ -1,8 +1,9 @@
-# SmartManufacturingStation
+# Smart Manufacturing Station
 CoLink's 2022 Capstone Project for SFU's School of Mechatronic Systems Engineering
 
-Tony Vu Nguyen
-Dexter L. Zamora
-Jackson Yang
-Teresa Lau
-Andy Yang
+## Team Members:<br />
+Tony Vu Nguyen<br />
+Dexter L. Zamora<br />
+Jackson Yang<br />
+Teresa Lau<br />
+Andy Yang<br />
