@@ -1,0 +1,9 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"90-02042019-039547";"";
+"REFERENCE";"6ES75221BL010AB0";"";
+"TraceParts.PartTitle";"S7-1500, DQ 32X24VDC/0.5A HF";"";
+"TraceParts.InstanceId";"90-02042019-039547AMM1HRJM2JHGEYDDPKAMPUDT5";"";
+"SUPPLIER";"SIEMENS";"";
+"DESIGN";"S7-1500, DQ 32X24VDC/0.5A HF";"";
+"TraceParts.PartVersion";"1.0.0";"";
+"TraceParts.PartLanguage";"en";"";

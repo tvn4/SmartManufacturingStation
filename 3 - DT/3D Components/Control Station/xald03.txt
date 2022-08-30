@@ -1,0 +1,9 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"90-13072022-057812";"";
+"REFERENCE";"XALD03";"";
+"TraceParts.PartTitle";"Control stations XALD for control and signaling units diameter 22_3 cut out - XALD03";"";
+"TraceParts.InstanceId";"90-13072022-0578122N3XX9WWY2MK673V115V3T3RA";"";
+"SUPPLIER";"Schneider Electric";"";
+"DESIGN";"Control stations XALD for control and signaling units diameter 22_3 cut out - XALD03";"";
+"TraceParts.PartVersion";"1.0.0";"";
+"TraceParts.PartLanguage";"en";"";

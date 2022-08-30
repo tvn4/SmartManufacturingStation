@@ -1,0 +1,13 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"90-02042019-039448";"";
+"REFERENCE";"6ES75152AM010AB0";"";
+"TraceParts.PartTitle";"SPS - basic device";"";
+"TraceParts.InstanceId";"90-02042019-039448ADPQLP73UOURE2O3XCF6LH2FN";"";
+"DESIGN";"SIMATIC S7-1500, CPU 1515-2 PN, central processing unit with working memory";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartStatusId";"";"";
+"SUPPLIER";"SIEMENS";"";
+"TraceParts.PartVersion";"1.0.0";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.ClassPath";"SIEMENS_AUTOMATION:90-02042019-039448";"";

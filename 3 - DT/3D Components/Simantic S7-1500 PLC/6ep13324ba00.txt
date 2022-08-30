@@ -1,0 +1,9 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"90-02042019-943106";"";
+"REFERENCE";"6EP13324BA00";"";
+"TraceParts.PartTitle";"SIMATIC PM 1507 24V/3A stabilized power supply for SIMATIC S7-1500 input:";"";
+"TraceParts.InstanceId";"90-02042019-94310674K4ZI7V5AD0OXMVTG3VN9FRD";"";
+"SUPPLIER";"SIEMENS";"";
+"DESIGN";"SIMATIC PM 1507 24V/3A stabilized power supply for SIMATIC S7-1500 input:";"";
+"TraceParts.PartVersion";"1.0.0";"";
+"TraceParts.PartLanguage";"en";"";
